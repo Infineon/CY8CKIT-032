@@ -1,0 +1,18 @@
+var searchData=
+[
+  ['cy8ckit_5f032_5ffree',['cy8ckit_032_free',['../group__group__board__libs__afe.html#ga95cffb0a55bb053a698c65a1e995a73b',1,'cy8ckit_032_free():&#160;cy8ckit_032.c'],['../group__group__board__libs__afe.html#ga95cffb0a55bb053a698c65a1e995a73b',1,'cy8ckit_032_free(void):&#160;cy8ckit_032.c']]],
+  ['cy8ckit_5f032_5fget_5fambient_5flight_5flux',['cy8ckit_032_get_ambient_light_lux',['../group__group__board__libs__afe.html#ga7f7c5b43b0865b54a5924018a7ba1d6f',1,'cy8ckit_032.h']]],
+  ['cy8ckit_5f032_5fget_5fbutton_5fstate',['cy8ckit_032_get_button_state',['../group__group__board__libs__afe.html#gaecbe783623caee02f3c33260d564a218',1,'cy8ckit_032_get_button_state(cy8ckit_032_button_t button, bool *state):&#160;cy8ckit_032.c'],['../group__group__board__libs__afe.html#gaecbe783623caee02f3c33260d564a218',1,'cy8ckit_032_get_button_state(cy8ckit_032_button_t button, bool *state):&#160;cy8ckit_032.c']]],
+  ['cy8ckit_5f032_5fget_5fbutton_5fstates',['cy8ckit_032_get_button_states',['../group__group__board__libs__afe.html#ga133dd5aaaec2244008abda92ba8f4bb8',1,'cy8ckit_032.h']]],
+  ['cy8ckit_5f032_5fget_5fcled_5fstate',['cy8ckit_032_get_cled_state',['../group__group__board__libs__afe.html#ga6e086bd772859b13190977f9a11d3424',1,'cy8ckit_032_get_cled_state(cy8ckit_032_cled_t cled, bool *state):&#160;cy8ckit_032.c'],['../group__group__board__libs__afe.html#ga6e086bd772859b13190977f9a11d3424',1,'cy8ckit_032_get_cled_state(cy8ckit_032_cled_t cled, bool *state):&#160;cy8ckit_032.c']]],
+  ['cy8ckit_5f032_5fget_5fcled_5fstates',['cy8ckit_032_get_cled_states',['../group__group__board__libs__afe.html#gad0904175debfeefc12418de6819c747f',1,'cy8ckit_032.h']]],
+  ['cy8ckit_5f032_5fget_5fhumidity_5fpercent',['cy8ckit_032_get_humidity_percent',['../group__group__board__libs__afe.html#gaf3eccc9ce9a839fd55285253550e62e1',1,'cy8ckit_032.h']]],
+  ['cy8ckit_5f032_5fget_5fled_5fcontrol',['cy8ckit_032_get_led_control',['../group__group__board__libs__afe.html#ga510471363750648f95a23e275b80c82b',1,'cy8ckit_032.h']]],
+  ['cy8ckit_5f032_5fget_5fpotentiometer_5fvoltage',['cy8ckit_032_get_potentiometer_voltage',['../group__group__board__libs__afe.html#ga857e8c048725f58b6a384da25d8e6c7f',1,'cy8ckit_032.h']]],
+  ['cy8ckit_5f032_5fget_5ftemperature_5fc',['cy8ckit_032_get_temperature_c',['../group__group__board__libs__afe.html#ga8b76517d2c71cc29c15994e291ef52f5',1,'cy8ckit_032.h']]],
+  ['cy8ckit_5f032_5finit',['cy8ckit_032_init',['../group__group__board__libs__afe.html#ga3f1d698f453a56c53c6fb82154eab33d',1,'cy8ckit_032_init(cyhal_i2c_t *inst):&#160;cy8ckit_032.c'],['../group__group__board__libs__afe.html#ga3f1d698f453a56c53c6fb82154eab33d',1,'cy8ckit_032_init(cyhal_i2c_t *inst):&#160;cy8ckit_032.c']]],
+  ['cy8ckit_5f032_5fset_5fcled_5fstate',['cy8ckit_032_set_cled_state',['../group__group__board__libs__afe.html#ga4fe179327d38604d082fd32706a836e9',1,'cy8ckit_032_set_cled_state(cy8ckit_032_cled_t cled, bool state):&#160;cy8ckit_032.c'],['../group__group__board__libs__afe.html#ga4fe179327d38604d082fd32706a836e9',1,'cy8ckit_032_set_cled_state(cy8ckit_032_cled_t cled, bool state):&#160;cy8ckit_032.c']]],
+  ['cy8ckit_5f032_5fset_5fcled_5fstates',['cy8ckit_032_set_cled_states',['../group__group__board__libs__afe.html#ga9a2abb7cf0fc2e7a227b0090206c6b25',1,'cy8ckit_032.h']]],
+  ['cy8ckit_5f032_5fset_5fdac_5fvoltage',['cy8ckit_032_set_dac_voltage',['../group__group__board__libs__afe.html#ga914db1d633216a9597a3382f31c45b91',1,'cy8ckit_032.h']]],
+  ['cy8ckit_5f032_5fset_5fled_5fcontrol',['cy8ckit_032_set_led_control',['../group__group__board__libs__afe.html#ga1afa04ddd2a43dc24429099544f57ee5',1,'cy8ckit_032.h']]]
+];
