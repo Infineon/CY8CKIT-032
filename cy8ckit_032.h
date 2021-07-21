@@ -6,7 +6,7 @@
  *
  *******************************************************************************
  * \copyright
- * Copyright 2018-2020 Cypress Semiconductor Corporation
+ * Copyright 2018-2021 Cypress Semiconductor Corporation
  * SPDX-License-Identifier: Apache-2.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -39,7 +39,8 @@
 /**
  * \addtogroup group_board_libs_display
  * \{
- * The display is handled by the display-oled-ssd1306 library, details are available at https://github.com/cypresssemiconductorco/display-oled-ssd1306.
+ * The display is handled by the display-oled-ssd1306 library, details are available at
+ * https://github.com/cypresssemiconductorco/display-oled-ssd1306.
  * \}
  */
 
@@ -84,15 +85,18 @@ extern "C"
 /** \} group_board_libs_pins */
 
 /**
-* \addtogroup group_board_libs_afe
-* \{
-* APIs for interacting with the sensors and user interface widgets on the board.
-*/
+ * \addtogroup group_board_libs_afe
+ * \{
+ * APIs for interacting with the sensors and user interface widgets on the board.
+ */
 
-/** Different operating mode for the CapSense LEDs (CLED0, CLED1, CLED2, CLED3). \ref cy8ckit_032_set_led_control() */
-typedef enum {
-    CY8CKIT_032_LED_CTRL_CAPSENSE = 0x00, //!< LEDs are controlled by CapSense signal detect
-    CY8CKIT_032_LED_CTRL_SW = 0x01,       //!< LEDs are controlled by sofware \ref cy8ckit_032_set_cled_states()
+/** Different operating mode for the CapSense LEDs (CLED0, CLED1, CLED2, CLED3). \ref
+   cy8ckit_032_set_led_control() */
+typedef enum
+{
+    CY8CKIT_032_LED_CTRL_CAPSENSE = 0x00, /**< LEDs are controlled by CapSense signal detect */
+    CY8CKIT_032_LED_CTRL_SW       = 0x01  /**< LEDs are controlled by sofware */
+                                          /**< \ref cy8ckit_032_set_cled_states() */
 } cy8ckit_032_led_ctrl_t;
 
 /** The CapSense LEDs that can be controlled by the CapSense detection, or software. See:
@@ -102,27 +106,30 @@ typedef enum {
  *     - \ref cy8ckit_032_set_cled_states()
  *     - \ref cy8ckit_032_set_cled_state()
  */
-typedef enum {
-    CY8CKIT_032_CLED0 = 0x01, //!< CapSense LED0
-    CY8CKIT_032_CLED1 = 0x02, //!< CapSense LED1
-    CY8CKIT_032_CLED2 = 0x04, //!< CapSense LED2
-    CY8CKIT_032_CLED3 = 0x08, //!< CapSense LED3
+typedef enum
+{
+    CY8CKIT_032_CLED0 = 0x01, /**< CapSense LED0 */
+    CY8CKIT_032_CLED1 = 0x02, /**< CapSense LED1 */
+    CY8CKIT_032_CLED2 = 0x04, /**< CapSense LED2 */
+    CY8CKIT_032_CLED3 = 0x08  /**< CapSense LED3 */
 } cy8ckit_032_cled_t;
 
-/** The different buttons that are read by \ref cy8ckit_032_get_button_states() or \ref cy8ckit_032_get_button_state() */
-typedef enum {
-    CY8CKIT_032_BTN_CAPSENSE_B0 = 0x01,   //!< CapSense Button 0 (B0)
-    CY8CKIT_032_BTN_CAPSENSE_B1 = 0x02,   //!< CapSense Button 1 (B1)
-    CY8CKIT_032_BTN_CAPSENSE_B2 = 0x04,   //!< CapSense Button 2 (B2)
-    CY8CKIT_032_BTN_CAPSENSE_B3 = 0x08,   //!< CapSense Button 3 (B3)
-    CY8CKIT_032_BTN_MECHANICAL_B1 = 0x10, //!< Mechanical Button 1 (MB1)
-    CY8CKIT_032_BTN_MECHANICAL_B2 = 0x20, //!< Mechanical Button 2 (MB2)
-    CY8CKIT_032_BTN_PROXIMITY = 0x40,     //!< Proximity Sensor (Proximity Loop)
+/** The different buttons that are read by \ref cy8ckit_032_get_button_states() or \ref
+   cy8ckit_032_get_button_state() */
+typedef enum
+{
+    CY8CKIT_032_BTN_CAPSENSE_B0   = 0x01, /**< CapSense Button 0 (B0) */
+    CY8CKIT_032_BTN_CAPSENSE_B1   = 0x02, /**< CapSense Button 1 (B1) */
+    CY8CKIT_032_BTN_CAPSENSE_B2   = 0x04, /**< CapSense Button 2 (B2) */
+    CY8CKIT_032_BTN_CAPSENSE_B3   = 0x08, /**< CapSense Button 3 (B3) */
+    CY8CKIT_032_BTN_MECHANICAL_B1 = 0x10, /**< Mechanical Button 1 (MB1) */
+    CY8CKIT_032_BTN_MECHANICAL_B2 = 0x20, /**< Mechanical Button 2 (MB2) */
+    CY8CKIT_032_BTN_PROXIMITY     = 0x40  /**< Proximity Sensor (Proximity Loop) */
 } cy8ckit_032_button_t;
 
 /** \cond INTERNAL */
 
-/* I2C memory offsets for manipulating data on the shield. */
+// I2C memory offsets for manipulating data on the shield.
 #define _CY8CKIT_032_I2C_OFFSET_DAC_VALUE      (0x00)
 #define _CY8CKIT_032_I2C_OFFSET_LED_VALUE      (0x04)
 #define _CY8CKIT_032_I2C_OFFSET_LED_CONTROL    (0x05)
@@ -132,10 +139,10 @@ typedef enum {
 #define _CY8CKIT_032_I2C_OFFSET_AMBIENT_LIGHT  (0x0F)
 #define _CY8CKIT_032_I2C_OFFSET_POTENTIOMETER  (0x13)
 
-/* Utility functions for reading/writing data to the shield. */
-cy_rslt_t _cy8ckit_032_get_byte(uint8_t offset, uint8_t *value);
+// Utility functions for reading/writing data to the shield.
+cy_rslt_t _cy8ckit_032_get_byte(uint8_t offset, uint8_t* value);
 cy_rslt_t _cy8ckit_032_set_byte(uint8_t offset, uint8_t value);
-cy_rslt_t _cy8ckit_032_get_float(uint8_t offset, float *value);
+cy_rslt_t _cy8ckit_032_get_float(uint8_t offset, float* value);
 cy_rslt_t _cy8ckit_032_set_float(uint8_t offset, float value);
 
 /** \endcond */
@@ -149,7 +156,7 @@ cy_rslt_t _cy8ckit_032_set_float(uint8_t offset, float value);
  * @return CY_RSLT_SUCCESS if properly initialized, else an error indicating
  * what went wrong.
  */
-cy_rslt_t cy8ckit_032_init(cyhal_i2c_t *inst);
+cy_rslt_t cy8ckit_032_init(cyhal_i2c_t* inst);
 
 /**
  * Frees up any resources allocated as part of \ref cy8ckit_032_init().
@@ -167,6 +174,7 @@ static inline cy_rslt_t cy8ckit_032_set_dac_voltage(float volts)
     return _cy8ckit_032_set_float(_CY8CKIT_032_I2C_OFFSET_DAC_VALUE, volts);
 }
 
+
 /**
  * Gets the current state of the CapSense LEDs on the shield board.
  * @param[out] states  The current state of each of the CLEDs.
@@ -174,10 +182,11 @@ static inline cy_rslt_t cy8ckit_032_set_dac_voltage(float volts)
  * @return CY_RSLT_SUCCESS if successful, else an error about
  * what went wrong
  */
-static inline cy_rslt_t cy8ckit_032_get_cled_states(uint8_t *states)
+static inline cy_rslt_t cy8ckit_032_get_cled_states(uint8_t* states)
 {
     return _cy8ckit_032_get_byte(_CY8CKIT_032_I2C_OFFSET_LED_VALUE, states);
 }
+
 
 /**
  * Gets the current state of a single CapSense LED on the shield board.
@@ -186,7 +195,7 @@ static inline cy_rslt_t cy8ckit_032_get_cled_states(uint8_t *states)
  * @return CY_RSLT_SUCCESS if successful, else an error about
  * what went wrong
  */
-cy_rslt_t cy8ckit_032_get_cled_state(cy8ckit_032_cled_t cled, bool *state);
+cy_rslt_t cy8ckit_032_get_cled_state(cy8ckit_032_cled_t cled, bool* state);
 
 /**
  * Sets the current state of the CapSense LEDs on the shield board if it is
@@ -200,6 +209,7 @@ static inline cy_rslt_t cy8ckit_032_set_cled_states(uint8_t states)
 {
     return _cy8ckit_032_set_byte(_CY8CKIT_032_I2C_OFFSET_LED_VALUE, states);
 }
+
 
 /**
  * Sets the current state of the referenced CapSense LED on the shield board
@@ -222,16 +232,18 @@ static inline cy_rslt_t cy8ckit_032_set_led_control(cy8ckit_032_led_ctrl_t contr
     return _cy8ckit_032_set_byte(_CY8CKIT_032_I2C_OFFSET_LED_CONTROL, control);
 }
 
+
 /**
  * Gets the current controller mode for the CapSense LEDs.
  * @param[out] control  The controller mode for the CLEDs.
  * @return CY_RSLT_SUCCESS if successful, else an error about
  * what went wrong
  */
-static inline cy_rslt_t cy8ckit_032_get_led_control(cy8ckit_032_led_ctrl_t *control)
+static inline cy_rslt_t cy8ckit_032_get_led_control(cy8ckit_032_led_ctrl_t* control)
 {
-    return _cy8ckit_032_get_byte(_CY8CKIT_032_I2C_OFFSET_LED_CONTROL, (uint8_t *)control);
+    return _cy8ckit_032_get_byte(_CY8CKIT_032_I2C_OFFSET_LED_CONTROL, (uint8_t*)control);
 }
+
 
 /**
  * Gets the current state of the Buttons on the shield board.
@@ -240,10 +252,11 @@ static inline cy_rslt_t cy8ckit_032_get_led_control(cy8ckit_032_led_ctrl_t *cont
  * @return CY_RSLT_SUCCESS if successful, else an error about
  * what went wrong
  */
-static inline cy_rslt_t cy8ckit_032_get_button_states(uint8_t *states)
+static inline cy_rslt_t cy8ckit_032_get_button_states(uint8_t* states)
 {
     return _cy8ckit_032_get_byte(_CY8CKIT_032_I2C_OFFSET_BUTTON_STATE, states);
 }
+
 
 /**
  * Gets the current state of a single Button on the shield board.
@@ -252,7 +265,7 @@ static inline cy_rslt_t cy8ckit_032_get_button_states(uint8_t *states)
  * @return CY_RSLT_SUCCESS if successful, else an error about
  * what went wrong
  */
-cy_rslt_t cy8ckit_032_get_button_state(cy8ckit_032_button_t button, bool *state);
+cy_rslt_t cy8ckit_032_get_button_state(cy8ckit_032_button_t button, bool* state);
 
 /**
  * Gets the current temperature, in degrees C, from the shield board.
@@ -260,10 +273,11 @@ cy_rslt_t cy8ckit_032_get_button_state(cy8ckit_032_button_t button, bool *state)
  * @return CY_RSLT_SUCCESS if successful, else an error about
  * what went wrong
  */
-static inline cy_rslt_t cy8ckit_032_get_temperature_c(float *temperature)
+static inline cy_rslt_t cy8ckit_032_get_temperature_c(float* temperature)
 {
     return _cy8ckit_032_get_float(_CY8CKIT_032_I2C_OFFSET_TEMPERATURE, temperature);
 }
+
 
 /**
  * Gets the current humidity, in percent, from the shield board.
@@ -271,10 +285,11 @@ static inline cy_rslt_t cy8ckit_032_get_temperature_c(float *temperature)
  * @return CY_RSLT_SUCCESS if successful, else an error about
  * what went wrong
  */
-static inline cy_rslt_t cy8ckit_032_get_humidity_percent(float *humidity)
+static inline cy_rslt_t cy8ckit_032_get_humidity_percent(float* humidity)
 {
     return _cy8ckit_032_get_float(_CY8CKIT_032_I2C_OFFSET_HUMIDITY, humidity);
 }
+
 
 /**
  * Gets the ambient light measurement, in lux, from the shield board.
@@ -282,10 +297,11 @@ static inline cy_rslt_t cy8ckit_032_get_humidity_percent(float *humidity)
  * @return CY_RSLT_SUCCESS if successful, else an error about
  * what went wrong
  */
-static inline cy_rslt_t cy8ckit_032_get_ambient_light_lux(float *light)
+static inline cy_rslt_t cy8ckit_032_get_ambient_light_lux(float* light)
 {
     return _cy8ckit_032_get_float(_CY8CKIT_032_I2C_OFFSET_AMBIENT_LIGHT, light);
 }
+
 
 /**
  * Gets the current potentiomenter voltage from the shield board.
@@ -293,10 +309,11 @@ static inline cy_rslt_t cy8ckit_032_get_ambient_light_lux(float *light)
  * @return CY_RSLT_SUCCESS if successful, else an error about
  * what went wrong
  */
-static inline cy_rslt_t cy8ckit_032_get_potentiometer_voltage(float *voltage)
+static inline cy_rslt_t cy8ckit_032_get_potentiometer_voltage(float* voltage)
 {
     return _cy8ckit_032_get_float(_CY8CKIT_032_I2C_OFFSET_POTENTIOMETER, voltage);
 }
+
 
 #if defined(__cplusplus)
 }

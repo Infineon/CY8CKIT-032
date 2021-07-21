@@ -11,6 +11,9 @@ This library includes support for each of the hardware components included on th
 * Driver for the User Controls (CapSense buttons, CapSense proximity sensor & Mechanical buttons)
 
 ### What Changed?
+#### v1.1.0
+* Fixed issue with writing floating point values
+* Fixed issue with turning off a single LED
 #### v1.0.0
 * Initial release supporting the OLED display and Analog Sensors
 
@@ -19,10 +22,12 @@ This version of the CY8CKIT-032 library was validated for compatibility with the
 
 | Software and Tools                        | Version |
 | :---                                      | :----:  |
-| ModusToolbox Software Environment         | 2.0     |
-| GCC Compiler                              | 7.4     |
-| IAR Compiler                              | 8.32    |
+| ModusToolbox Software Environment         | 2.2.1   |
+| GCC Compiler                              | 9.3.1   |
+| IAR Compiler                              | 8.4     |
 | ARM Compiler 6                            | 6.11    |
+
+Minimum required ModusToolbox Software Environment: v2.0
 
 ### More information
 
@@ -34,4 +39,4 @@ This version of the CY8CKIT-032 library was validated for compatibility with the
 * [ModusToolbox](https://www.cypress.com/products/modustoolbox-software-environment)
 
 ---
-© Cypress Semiconductor Corporation, 2019.
+© Cypress Semiconductor Corporation, 2019-2021.

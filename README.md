@@ -1,7 +1,6 @@
 # CY8CKIT-032 shield support library
 
-The CY8CKIT-032 is an Arduino Uno R3 compatible shield intended as a companion to add an analog front end (AFE) and user interface to a baseboard. Any baseboard with Arduino Uno R3
-compatible headers and I2C master functionality on the Arduino Uno R3 I2C pins is compatible with this shield.
+The CY8CKIT-032 is an Arduino Uno R3 compatible shield intended as a companion to add an analog front end (AFE) and user interface to a baseboard. Any baseboard with Arduino Uno R3 compatible headers and I2C master functionality on the Arduino Uno R3 I2C pins is compatible with this shield.
 
 A PSoC 4 Analog Coprocessor is used on the shield to read analog sensors (temperature, humidity, ambient light and potentiometer voltage) and to provide a CapSense user interface. The PSoC 4 acts as an I2C slave so that the analog sensor values can be read by the baseboard.
 
@@ -182,4 +181,4 @@ The following snippits of code show how to interact with other features of the s
 * [ModusToolbox](https://www.cypress.com/products/modustoolbox-software-environment)
 
 ---
-© Cypress Semiconductor Corporation, 2019.
+© Cypress Semiconductor Corporation, 2019-2021.
